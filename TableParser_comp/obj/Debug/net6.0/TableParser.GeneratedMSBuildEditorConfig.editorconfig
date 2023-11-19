@@ -12,10 +12,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TableParser
-build_property.ProjectDir = F:\source\TableParser_comp\
+build_property.ProjectDir = F:\Projects\1 курс урфу\Программирование на C#\UlearnProjects\TableParser_comp\
 
-[F:/source/TableParser_comp/UI/App.axaml]
+[F:/Projects/1 курс урфу/Программирование на C\#/UlearnProjects/TableParser_comp/UI/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[F:/source/TableParser_comp/UI/MainWindow.axaml]
+[F:/Projects/1 курс урфу/Программирование на C\#/UlearnProjects/TableParser_comp/UI/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

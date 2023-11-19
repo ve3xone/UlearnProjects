@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\source\\TableParser_comp\\TableParser.csproj": {}
+    "F:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\TableParser_comp\\TableParser.csproj": {}
   },
   "projects": {
-    "F:\\source\\TableParser_comp\\TableParser.csproj": {
+    "F:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\TableParser_comp\\TableParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\source\\TableParser_comp\\TableParser.csproj",
+        "projectUniqueName": "F:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\TableParser_comp\\TableParser.csproj",
         "projectName": "TableParser",
-        "projectPath": "F:\\source\\TableParser_comp\\TableParser.csproj",
+        "projectPath": "F:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\TableParser_comp\\TableParser.csproj",
         "packagesPath": "C:\\Users\\ve3xone\\.nuget\\packages\\",
-        "outputPath": "F:\\source\\TableParser_comp\\obj\\",
+        "outputPath": "F:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\TableParser_comp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ve3xone\\AppData\\Roaming\\NuGet\\NuGet.Config",

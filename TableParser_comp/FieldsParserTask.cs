@@ -33,31 +33,41 @@ public class FieldParserTaskTests
 			Assert.AreEqual(expectedResult[i], actualResult[i].Value);
 		}
 	}
-
-	// Скопируйте сюда метод с тестами из предыдущей задачи.
 }
 
 public class FieldsParserTask
 {
-	// При решении этой задаче постарайтесь избежать создания методов, длиннее 10 строк.
-	// Подумайте как можно использовать ReadQuotedField и Token в этой задаче.
 	public static List<Token> ParseLine(string line)
 	{
-		var result = new List<Token>();
-		var index = 0;
-		while (index < line.Length)
-		{
-			while (line[index] == ' ')
-			{
-				index++;
-			}
-			var field = ReadField(line, index);
-			result.Add(field);
-			index = field.GetIndexNextToToken();
-		}
-		return result;
-		//return new List<Token> { ReadQuotedField(line, 0) }; // сокращенный синтаксис для инициализации коллекции.
-	}
+        //var result = new List<Token>();
+        //var index = 0;
+        //while (index < line.Length)
+        //{
+        //	while (line[index] == ' ')
+        //		index++;
+        //	var field = ReadField(line, index);
+        //	result.Add(field);
+        //	index = field.GetIndexNextToToken();
+        //}
+        //return result;
+        var result = new List<Token>();
+        var index = 0;
+
+        while (index < line.Length)
+        {
+            while (index < line.Length && line[index] == ' ')
+                index++;
+
+            if (index < line.Length)
+            {
+                var field = ReadField(line, index);
+                result.Add(field);
+                index = field.GetIndexNextToToken();
+            }
+        }
+
+        return result;
+    }
         
 	private static Token ReadField(string line, int startIndex)
 	{
@@ -72,7 +82,6 @@ public class FieldsParserTask
         }
 		var length = index - startIndex;
 		return new Token(line.Substring(startIndex, length), startIndex, length);
-        //return new Token(line, 0, line.Length);
     }
 
 	public static Token ReadQuotedField(string line, int startIndex)
