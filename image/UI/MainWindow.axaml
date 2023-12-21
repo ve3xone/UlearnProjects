@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="Recognizer.UI.MainWindow"
+        Title=""
+        Width="1060"
+        Height="400">
+    <Panel>
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*">
+            <Image Name="Default" Grid.Row="0" Grid.Column="0" />
+            <Image Name="Pixels" Grid.Row="0" Grid.Column="1" />
+            <Image Name="Grayscale" Grid.Row="0" Grid.Column="2" />
+            <Image Name="Clear" Grid.Row="1" Grid.Column="0" />
+            <Image Name="Sobell" Grid.Row="1" Grid.Column="1" />
+            <Image Name="Trashhold" Grid.Row="1" Grid.Column="2" />
+        </Grid>
+    </Panel>
+</Window>
