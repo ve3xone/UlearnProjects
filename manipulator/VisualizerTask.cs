@@ -85,7 +85,8 @@ public static class VisualizerTask
         {
             points[i + 1] = ConvertMathToWindow(joints[i], shoulderPos);
             context.DrawLine(ManipulatorPen, points[i], points[i + 1]);
-            context.PlatformImpl.DrawEllipse(JointBrush, null, new Rect(points[i].X - 5, points[i].Y - 5, 10, 10));
+            //context.PlatformImpl.DrawEllipse(JointBrush, null, new Rect(, 10, 10));
+            context.DrawEllipse(JointBrush, ManipulatorPen, new Point(points[i].X - 5, points[i].Y - 5), 10, 10);
         }
     }
 
