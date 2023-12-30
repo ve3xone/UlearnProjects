@@ -29,7 +29,7 @@ namespace StructBenchmarking
     public class BuilderTest : ITask
     {
         [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-        public void Run()
+    	public void Run()
         {
             var str = new StringBuilder();
             for (int i = 0; i < 10000; i++)
@@ -42,7 +42,7 @@ namespace StructBenchmarking
 
     public class StringTest : ITask
     {
-        [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
+		[MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
         public void Run()
         {
             var ans = new string('a', 10000);
