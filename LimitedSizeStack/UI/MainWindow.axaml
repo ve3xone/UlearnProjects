@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        Width="400"
+        Height="300"
+        CanResize="False"
+        FontFamily="Serif"
+        FontSize="14"
+        Title="Список дел на сегодня"
+        x:Class="LimitedSizeStack.UI.MainWindow">
+    <StackPanel>
+        <TextBlock Margin="10,10,10,0">Введите новое значение</TextBlock>
+
+        <Grid Background="White" ColumnDefinitions="5*,Auto" Margin="10,5">
+            <TextBox Height="30" Grid.Column="0" Name="TextBox" />
+            <Button Margin="5" Grid.Column="1" Name="ButtonAdd" />
+        </Grid>
+
+        <DockPanel Margin="10,5" >
+            <Button Name="ButtonRemove" />
+            <Button Name="ButtonUndo" />
+            <!-- <Button Name="ButtonMoveUp" /> -->
+        </DockPanel>
+
+        <ListBox
+            Margin="10,5"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="3"
+            Padding="4"
+            SelectedIndex="{Binding SelectedIndex}"
+            Height="150"
+            Name="TasksList"
+            Items="{Binding Items}" />
+
+    </StackPanel>
+</Window>
