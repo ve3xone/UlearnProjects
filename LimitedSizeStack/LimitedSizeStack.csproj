@@ -24,6 +24,9 @@
     <Content Include="*.Initial.*" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="LimitedSizeStack_shitcode.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.13" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.13" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
