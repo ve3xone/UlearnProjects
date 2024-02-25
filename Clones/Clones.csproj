@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="*.Initial.*"/>
+    <Content Include="*.Initial.*"/>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="checking/tests/**"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1"/>
+    <PackageReference Include="NUnit" Version="3.13.3"/>
+  </ItemGroup>
+</Project>
