@@ -6,14 +6,12 @@ public static class ExpSmoothingTask
 {
     public static IEnumerable<DataPoint> SmoothExponentialy(this IEnumerable<DataPoint> data, double alpha)
     {
-        double value = 0;
-        bool isFirst = true;
+        double value = double.NaN;
 
         foreach (var point in data)
         {
-            if (isFirst)
+            if (double.IsNaN(value))
             {
-                isFirst = false;
                 value = point.OriginalY;
             }
             else
