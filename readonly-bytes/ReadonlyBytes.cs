@@ -3,60 +3,51 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace hashes
+namespace hashes;
+
+public class ReadonlyBytes : IEnumerable<byte>
 {
-    public class ReadonlyBytes : IEnumerable<byte>
+    private readonly byte[] bytes;
+    private readonly int hashCode;
+
+    public ReadonlyBytes(params byte[] bytes)
     {
-        private readonly byte[] _bytes;
-
-        public ReadonlyBytes(params byte[] bytes)
+        this.bytes = bytes ?? throw new ArgumentNullException(nameof(bytes));
+        unchecked
         {
-            _bytes = bytes ?? throw new ArgumentNullException(nameof(bytes));
-        }
-
-        public int Length => _bytes.Length;
-
-        public byte this[int index] => _bytes[index];
-
-        public override bool Equals(object obj)
-        {
-            if (obj == null || GetType() != obj.GetType())
-                return false;
-
-            var other = (ReadonlyBytes)obj;
-
-            if (Length != other.Length)
-                return false;
-
-            return _bytes.SequenceEqual(other._bytes);
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
+            var hash = 1010;
+            for (var index = 0; index < this.bytes.Length; index++)
             {
-                int hash = 17;
-                foreach (byte b in _bytes)
-                {
-                    hash = hash * 31 + b.GetHashCode();
-                }
-                return hash;
+                var bindex = this.bytes[index];
+                hash *= 10101;
+                hash += bindex;
             }
-        }
-
-        public IEnumerator<byte> GetEnumerator()
-        {
-            foreach (var b in _bytes)
-            {
-                yield return b;
-            }
-        }
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        public override string ToString()
-        {
-            return "[" + string.Join(", ", _bytes) + "]";
+            hashCode = hash;
         }
     }
+
+    public override bool Equals(object obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+            return false;
+
+        var other = (ReadonlyBytes)obj;
+
+        if (Length != other.Length)
+            return false;
+
+        return bytes.SequenceEqual(other.bytes);
+    }
+
+    public int Length => bytes.Length;
+
+    public byte this[int index] => bytes[index];
+
+    public override int GetHashCode() => hashCode;
+
+    public override string ToString() => $"[{string.Join(", ", bytes)}]";
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+    public IEnumerator<byte> GetEnumerator() => ((IEnumerable<byte>)bytes).GetEnumerator();
 }
