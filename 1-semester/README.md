@@ -12,3 +12,5 @@
 
 Ветвления:
 - [Практика «Рубль -лей -ля»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Pluralize/PluralizeTask.cs)
+- [Практика «Два прямоугольника»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Rectangles/RectanglesTask.cs)
+- [Практика «Расстояние до отрезка»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/DistanceTask/DistanceTask.cs)
