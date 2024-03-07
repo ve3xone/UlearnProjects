@@ -21,6 +21,8 @@
 - [Практика «Лабиринт диагональ»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Mazes/DiagonalMazeTask.cs)
 - [Практика «Dragon curve»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Fractals/DragonFractalTask.cs)
 
-Массивы:
+[Массивы](https://ulearn.me/course/basicprogramming/728f7ec0-e504-4896-a75f-a663a8be5c3d):
 - [Практика «Гистограмма»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Names/HistogramTask.cs)
 - [Практика «Тепловая карта»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Names/HeatmapTask.cs)
+
+Коллекции, строки, файлы:
