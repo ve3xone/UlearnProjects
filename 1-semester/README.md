@@ -11,4 +11,4 @@
 
 
 Ветвления:
-- [Практика «Рубль -лей -ля»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices\Pluralize\PluralizeTask.cs")
+- [Практика «Рубль -лей -ля»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Pluralize/PluralizeTask.cs)
