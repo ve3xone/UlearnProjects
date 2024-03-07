@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EzydJSeMGjBG1Imgog85qwKg6xyXNlYO9sN0AQe4H/I26kDxDNfTctLr6ZU1mQxVjU0gjaZbnbDrIwM/B/Fn1w==",
+  "dgSpecHash": "ebWtdMBluwxOegpxgq71H3QV0MEjLJA9dR7DQtdtW6N2/KaB+NoyDXnCK//6wu2WLdHY3ij8juvt1vr5ONAj6g==",
   "success": true,
-  "projectFilePath": "F:\\source\\Fractals\\Fractals.csproj",
+  "projectFilePath": "D:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\Fractals\\Fractals.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ve3xone\\.nuget\\packages\\avalonia\\0.10.13\\avalonia.0.10.13.nupkg.sha512",
     "C:\\Users\\ve3xone\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2020091801\\avalonia.angle.windows.natives.2.1.0.2020091801.nupkg.sha512",

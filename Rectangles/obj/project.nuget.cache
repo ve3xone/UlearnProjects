@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5dzNXcN1Esc6x2y3O4mQMMEbjMKVJgHQALLRa0S4qMLFHeQA5Chni7EqlyzQn07WzARJ+hUtO6g4iH9iSjoL1w==",
+  "dgSpecHash": "tcKMahpSvzgL9s9wGicBmAT42uzDlA8T/+TMMVKgkr4blThvY7hjUrTOC+YBQla1thJyT70HYicJFADu/eQmUA==",
   "success": true,
-  "projectFilePath": "F:\\source\\Rectangles\\Rectangles.csproj",
+  "projectFilePath": "D:\\Projects\\1 курс урфу\\Программирование на C#\\UlearnProjects\\Rectangles\\Rectangles.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ve3xone\\.nuget\\packages\\avalonia\\0.10.13\\avalonia.0.10.13.nupkg.sha512",
     "C:\\Users\\ve3xone\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2020091801\\avalonia.angle.windows.natives.2.1.0.2020091801.nupkg.sha512",

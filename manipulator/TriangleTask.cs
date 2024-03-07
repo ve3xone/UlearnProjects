@@ -7,10 +7,22 @@ namespace Manipulation
     {
         public static double GetABAngle(double a, double b, double c)
         {
-            if (a < 0 || b < 0 || c < 0)
+            if (!IsValidTriangle(a, b, c))
                 return double.NaN;
-            var angle = ((a * a) + (b * b) - (c * c)) / (2 * a * b);
+
+            var angle = CalculateCosineValue(a, b, c);
+
             return Math.Acos(angle);
+        }
+
+        private static bool IsValidTriangle(double a, double b, double c)
+        {
+            return (a + b) >= c && (b + c) >= a && (c + a) >= b;
+        }
+
+        private static double CalculateCosineValue(double a, double b, double c)
+        {
+            return (a * a + b * b - c * c) / (2 * a * b);
         }
     }
 

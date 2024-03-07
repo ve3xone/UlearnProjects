@@ -17,10 +17,10 @@ namespace Autocomplete
                 {
                     right = middle;
                 }
-				else
-				{
-					left = middle;
-				}
+                else
+                {
+                    left = middle;
+                }
             }
             return right;
         }

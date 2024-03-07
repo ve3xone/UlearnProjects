@@ -12,10 +12,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Rectangles
-build_property.ProjectDir = F:\source\Rectangles\
+build_property.ProjectDir = D:\Projects\1 курс урфу\Программирование на C#\UlearnProjects\Rectangles\
 
-[F:/source/Rectangles/UI/App.axaml]
+[D:/Projects/1 курс урфу/Программирование на C\#/UlearnProjects/Rectangles/UI/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[F:/source/Rectangles/UI/MainWindow.axaml]
+[D:/Projects/1 курс урфу/Программирование на C\#/UlearnProjects/Rectangles/UI/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

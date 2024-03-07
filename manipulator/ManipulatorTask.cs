@@ -29,7 +29,7 @@ namespace Manipulation
         [Test]
         public void TestMoveManipulatorTo()
         {
-            Random random = new();
+            Random random = new Random();
 
             for (int i = 0; i < 10; i++)
             {

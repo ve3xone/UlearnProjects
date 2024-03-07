@@ -1,15 +1,17 @@
+using System.Collections.Generic;
+
 namespace Passwords
 {
     public class CaseAlternatorTask
     {
         public static List<string> AlternateCharCases(string lowercaseWord)
         {
-            var result = new List<string>();
+            var result = new HashSet<string>();
             AlternateCharCases(lowercaseWord.ToCharArray(), 0, result);
-            return result;
+            return new List<string>(result);
         }
 
-        static void AlternateCharCases(char[] word, int startIndex, List<string> result)
+        static void AlternateCharCases(char[] word, int startIndex, HashSet<string> result)
         {
             if (startIndex == word.Length)
             {
@@ -17,18 +19,15 @@ namespace Passwords
                 return;
             }
 
+            AlternateCharCases(word, startIndex + 1, result);
             var original = word[startIndex];
             var upper = char.ToUpper(original);
-
-            // Add both upper and lower case variations
-            word[startIndex] = upper;
-            AlternateCharCases(word, startIndex + 1, result);
-
-            word[startIndex] = char.ToLower(original);
-            AlternateCharCases(word, startIndex + 1, result);
-
-            // Restore the original character
-            word[startIndex] = original;
+            if (char.IsLetter(original) && original != upper)
+            {
+                word[startIndex] = upper;
+                AlternateCharCases(word, startIndex + 1, result);
+                word[startIndex] = original;
+            }
         }
     }
 }

@@ -10,19 +10,19 @@ public static class AnglesToCoordinatesTask
     public static Point[] GetJointPositions(double shoulder, double elbow, double wrist)
     {
         var angle = shoulder;
-        var positFirst = UpperArm * Math.Cos(shoulder);
-        var positSecond = UpperArm * Math.Sin(shoulder);
-        var elbowPos = new Point((float)positFirst, (float)positSecond);
+        var x = UpperArm * Math.Cos(shoulder);
+        var y = UpperArm * Math.Sin(shoulder);
+        var elbowPos = new Point((float)x, (float)y);
 
         angle += elbow - Math.PI;
-        positFirst += Forearm * Math.Cos(angle);
-        positSecond += Forearm * Math.Sin(angle);
-        var wristPos = new Point((float)positFirst, (float)positSecond);
+        x += Forearm * Math.Cos(angle);
+        y += Forearm * Math.Sin(angle);
+        var wristPos = new Point((float)x, (float)y);
 
         angle += wrist - Math.PI;
-        positFirst += Palm * Math.Cos(angle);
-        positSecond += Palm * Math.Sin(angle);
-        var palmEndPos = new Point((float)positFirst, (float)positSecond);
+        x += Palm * Math.Cos(angle);
+        y += Palm * Math.Sin(angle);
+        var palmEndPos = new Point((float)x, (float)y);
 
         return new[]
         {

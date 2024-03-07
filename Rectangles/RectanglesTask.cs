@@ -1,6 +1,7 @@
 using System;
 
 namespace Rectangles;
+
 public static class RectanglesTask
 {
     // Пересекаются ли два прямоугольника (пересечение по границе и внутренность считаются пересечением)

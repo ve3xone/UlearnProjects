@@ -14,6 +14,7 @@ public static class VisualizerTask
     public static double Wrist = 2 * Math.PI / 3;
     public static double Elbow = 3 * Math.PI / 4;
     public static double Shoulder = Math.PI / 2;
+    private const double DegreesToRadians = Math.PI / 180;
 
     public static Brush UnreachableAreaBrush = new SolidColorBrush(Color.FromArgb(255, 255, 230, 230));
     public static Brush ReachableAreaBrush = new SolidColorBrush(Color.FromArgb(255, 230, 255, 230));
@@ -25,22 +26,22 @@ public static class VisualizerTask
         switch (key.Key)
         {
             case Key.W:
-                Elbow += Math.PI / 180;
+                Elbow += DegreesToRadians;
                 break;
             case Key.A:
-                Shoulder -= Math.PI / 180;
+                Shoulder -= DegreesToRadians;
                 break;
             case Key.S:
-                Elbow -= Math.PI / 180;
+                Elbow -= DegreesToRadians;
                 break;
             case Key.Q:
-                Shoulder += Math.PI / 180;
+                Shoulder += DegreesToRadians;
                 break;
         }
         Wrist = -Alpha - Shoulder - Elbow;
         display.InvalidateVisual();
     }
-    
+
     public static void MouseMove(IDisplay display, PointerEventArgs e)
     {
         var pos = e.GetPosition(display);
@@ -50,12 +51,12 @@ public static class VisualizerTask
         UpdateManipulator();
         display.InvalidateVisual();
     }
-    
+
     public static void MouseWheel(IDisplay display, PointerWheelEventArgs e)
     {
         Alpha += e.Delta.Y;
         UpdateManipulator();
-	    display.InvalidateVisual();
+        display.InvalidateVisual();
     }
 
     public static void UpdateManipulator()
@@ -85,7 +86,6 @@ public static class VisualizerTask
         {
             points[i + 1] = ConvertMathToWindow(joints[i], shoulderPos);
             context.DrawLine(ManipulatorPen, points[i], points[i + 1]);
-            //context.PlatformImpl.DrawEllipse(JointBrush, null, new Rect(, 10, 10));
             context.DrawEllipse(JointBrush, ManipulatorPen, new Point(points[i].X - 5, points[i].Y - 5), 10, 10);
         }
     }
@@ -101,20 +101,20 @@ public static class VisualizerTask
         var rmax = Manipulator.UpperArm + Manipulator.Forearm;
         var mathCenter = new Point(joints[2].X - joints[1].X, joints[2].Y - joints[1].Y);
         var windowCenter = ConvertMathToWindow(mathCenter, shoulderPos);
-        context.DrawEllipse(reachableBrush, 
+        context.DrawEllipse(reachableBrush,
             null,
-            new Point(windowCenter.X, windowCenter.Y), 
+            new Point(windowCenter.X, windowCenter.Y),
             rmax, rmax);
-        context.DrawEllipse(unreachableBrush, 
+        context.DrawEllipse(unreachableBrush,
             null,
-            new Point(windowCenter.X, windowCenter.Y), 
+            new Point(windowCenter.X, windowCenter.Y),
             rmin, rmin);
     }
-    
-	public static Point GetShoulderPos(IDisplay display)
-	{
-		return new Point(display.Bounds.Width / 2, display.Bounds.Height / 2);
-	}
+
+    public static Point GetShoulderPos(IDisplay display)
+    {
+        return new Point(display.Bounds.Width / 2, display.Bounds.Height / 2);
+    }
 
     public static Point ConvertMathToWindow(Point mathPoint, Point shoulderPos)
     {
