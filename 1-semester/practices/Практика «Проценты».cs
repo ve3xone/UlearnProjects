@@ -1,12 +1,12 @@
-public static double Calculate(string userInput)
+п»їpublic static double Calculate(string userInput)
 {
     string[] values = userInput.Split(' ');
 
     var sum = double.Parse(values[0]);
-    var rate = double.Parse(values[1]) / 100; // Процентная ставка в десятичных долях
+    var rate = double.Parse(values[1]) / 100; // РџСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР° РІ РґРµСЃСЏС‚РёС‡РЅС‹С… РґРѕР»СЏС…
     var months = int.Parse(values[2]);
 
-    // Количество периодов капитализации в году (месяцев в году)
+    // РљРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ РєР°РїРёС‚Р°Р»РёР·Р°С†РёРё РІ РіРѕРґСѓ (РјРµСЃСЏС†РµРІ РІ РіРѕРґСѓ)
     int compoundingFrequency = 12;
 
     double accumulatedAmount = sum * Math.Pow(1 + rate / compoundingFrequency,
