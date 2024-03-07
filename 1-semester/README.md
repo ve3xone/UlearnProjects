@@ -40,3 +40,7 @@
 - [Практика «Медианный фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/image/MedianFilterTask.cs)
 - [Практика «Пороговый фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/image/ThresholdFilterTask.cs)
 - [Практика «Оттенки серого»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/image/SobelFilterTask.cs)
+
+[Рекурсивные алгоритмы](https://ulearn.me/course/basicprogramming/Rekursiya_caec41b0-3166-40c0-9ded-3941c7f0b91d):
+- [Практика «Оттенки серого»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Passwords/CaseAlternatorTask.cs)
+- [Практика «Медианный фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/route-planning/PathFinderTask.cs)
