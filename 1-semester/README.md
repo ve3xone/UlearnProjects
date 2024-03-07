@@ -29,3 +29,9 @@
 - [Практика «Парсер предложений»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/TextAnalysis/SentencesParserTask.cs)
 - [Практика «Частотность N-грамм»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/TextAnalysis/FrequencyAnalysisTask.cs)
 - [Практика «Продолжение текста»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/TextAnalysis/TextGeneratorTask.cs)
+
+[Тестирование](https://ulearn.me/course/basicprogramming/Testirovanie_fc83621d-5787-42fa-81b9-4ba30575c963):
+- [Практика «Поля в кавычках»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/TableParser_complete/QuotedFieldTask.cs)
+- [Практика «Тестирование»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/)
+- [Практика «Парсер полей»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/TableParser_complete/FieldsParserTask.cs)
+
