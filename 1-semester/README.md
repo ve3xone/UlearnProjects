@@ -14,3 +14,9 @@
 - [Практика «Рубль -лей -ля»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Pluralize/PluralizeTask.cs)
 - [Практика «Два прямоугольника»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Rectangles/RectanglesTask.cs)
 - [Практика «Расстояние до отрезка»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/DistanceTask/DistanceTask.cs)
+
+Циклы:
+- [Практика «Пустой лабиринт»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Mazes/EmptyMazeTask.cs)
+- [Практика «Лабиринт змейка»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Mazes/SnakeMazeTask.cs)
+- [Практика «Лабиринт диагональ»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Mazes/DiagonalMazeTask.cs)
+- [Практика «Dragon curve»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Fractals/DragonFractalTask.cs)
