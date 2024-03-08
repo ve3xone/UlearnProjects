@@ -73,5 +73,5 @@
 - [Практика «Карманный гугл»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/PocketGoogle/Indexer.cs)
 
 [Структуры](https://ulearn.me/course/basicprogramming/Ob_yavlenie_struktury_2f0b0caa-ce22-4068-93bb-e5c1a0f8a2a4):
-- [Практика «Benchmark»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/StructBenchmarking/BenchmarkTask.cs)
+- [Практика «Benchmark»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/StructBenchmarking/BenchmarkTask.cs)
 - [Практика «Эксперименты»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/StructBenchmarking/ExperimentsTask.cs)
