@@ -44,3 +44,20 @@
 [Рекурсивные алгоритмы](https://ulearn.me/course/basicprogramming/Rekursiya_caec41b0-3166-40c0-9ded-3941c7f0b91d):
 - [Практика «Оттенки серого»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Passwords/CaseAlternatorTask.cs)
 - [Практика «Медианный фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/route-planning/PathFinderTask.cs)
+
+[Поиск и сортировка](https://ulearn.me/course/basicprogramming/Binarnyy_poisk_d48408e2-8baf-4742-8f87-c0c866ee4d38):
+- [Практика «Левая граница»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/autocomplete/LeftBorderTask.cs)
+- [Практика «Медианный фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/autocomplete/RightBorderTask.cs)
+- [Практика «Пороговый фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/autocomplete/AutocompleteTask.cs)
+
+[Практикум](https://ulearn.me/course/basicprogramming/O_vazhnosti_algoritmov_0728da8d-eb4e-4cd6-873e-a41363755f49):
+- [Практика «Манипулятор»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/manipulator/AnglesToCoordinatesTask.cs)
+- [Практика «Визуализация»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/manipulator/VisualizerTask.cs)
+- [Практика «Пороговый фильтр»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/manipulator/TriangleTask.cs)
+- [Практика «Решение манипулятора»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/manipulator/ManipulatorTask.cs)
+
+[Основы ООП](https://ulearn.me/course/basicprogramming/Klassy_9eb68528-17cb-4d7f-99f3-40210a8f6cef):
+- [Практика «Вектор»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Практика «Вектор».cs)
+- [Практика «Отрезок»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Практика «Отрезок».cs)
+- [Практика «Нестатические методы»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Практика «Нестатические методы».cs)
+- [Практика «256 оттенков серого»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/GeometryPainting/SegmentExtensions.cs)
