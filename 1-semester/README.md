@@ -57,7 +57,7 @@
 - [Практика «Решение манипулятора»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/manipulator/ManipulatorTask.cs)
 
 [Основы ООП](https://ulearn.me/course/basicprogramming/Klassy_9eb68528-17cb-4d7f-99f3-40210a8f6cef):
-- [Практика «Вектор»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Практика «Вектор».cs)
-- [Практика «Отрезок»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Практика «Отрезок».cs)
-- [Практика «Нестатические методы»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Практика «Нестатические методы».cs)
+- [Практика «Вектор»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%92%D0%B5%D0%BA%D1%82%D0%BE%D1%80%C2%BB.cs)
+- [Практика «Отрезок»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%9E%D1%82%D1%80%D0%B5%D0%B7%D0%BE%D0%BA%C2%BB.cs)
+- [Практика «Нестатические методы»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%9D%D0%B5%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B%C2%BB.cs)
 - [Практика «256 оттенков серого»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/GeometryPainting/SegmentExtensions.cs)
