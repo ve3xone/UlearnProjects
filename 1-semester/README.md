@@ -61,3 +61,8 @@
 - [Практика «Отрезок»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%9E%D1%82%D1%80%D0%B5%D0%B7%D0%BE%D0%BA%C2%BB.cs)
 - [Практика «Нестатические методы»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%9D%D0%B5%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B%C2%BB.cs)
 - [Практика «256 оттенков серого»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/GeometryPainting/SegmentExtensions.cs)
+
+[Наследование](https://ulearn.me/course/basicprogramming/92931100-7a4c-48ce-bb88-bc7820fc703c):
+- [Практика «Земля и Диггер»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Digger/Практика «Земля и Диггер».cs)
+- [Практика «Мешки и Золото»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Digger/Практика «Мешки и Золото».cs)
+- [Практика «Монстры»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Digger/Практика «Монстры».cs)
