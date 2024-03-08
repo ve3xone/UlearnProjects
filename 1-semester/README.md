@@ -66,3 +66,8 @@
 - [Практика «Земля и Диггер»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Digger/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%97%D0%B5%D0%BC%D0%BB%D1%8F%20%D0%B8%20%D0%94%D0%B8%D0%B3%D0%B3%D0%B5%D1%80%C2%BB.cs)
 - [Практика «Мешки и Золото»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Digger/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%9C%D0%B5%D1%88%D0%BA%D0%B8%20%D0%B8%20%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%C2%BB.cs)
 - [Практика «Монстры»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Digger/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20%C2%AB%D0%9C%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%8B%C2%BB.cs)
+
+[Целостность данных](https://ulearn.me/course/basicprogramming/Tselostnost_dannykh_f177f3c4-c0f8-4759-9d41-2cdb7f22ca15):
+- [Практика «Readonly Vector»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/ReadOnlyVector.cs)
+- [Практика «Счет из отеля»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/HotelAccounting/AccountingModel.cs)
+- [Практика «Карманный гугл»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/PocketGoogle/Indexer.cs)
