@@ -3,18 +3,18 @@
 # Практики:
 
 [Очереди, стеки, дженерики](https://ulearn.me/course/basicprogramming2/Steki_i_ocheredi_48016626-87ae-411d-ae97-f7a49e465dbc):
-- [Практика «Limited Size Stack»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/LimitedSizeStack/LimitedSizeStack.cs)
-- [Практика «Отмена»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/LimitedSizeStack/ListModel.cs)
-- [Практика «CVS»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Clones/CloneVersionSystem.cs)
+- [Практика «Limited Size Stack»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/LimitedSizeStack/LimitedSizeStack.cs)
+- [Практика «Отмена»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/LimitedSizeStack/ListModel.cs)
+- [Практика «CVS»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Clones/CloneVersionSystem.cs)
 
 [yield return](https://ulearn.me/course/basicprogramming2/foreach_IEnumerable_i_IEnumerator_49c485c2-d2a7-4362-a473-5757719bd002):
-- [Практика «Экспоненциальное сглаживание»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Smooth/ExpSmoothingTask.cs)
-- [Практика «Скользящее среднее»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Smooth/MovingAverageTask.cs)
-- [Практика «Скользящий максимум»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Smooth/MovingMaxTask.cs)
+- [Практика «Экспоненциальное сглаживание»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Smooth/ExpSmoothingTask.cs)
+- [Практика «Скользящее среднее»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Smooth/MovingAverageTask.cs)
+- [Практика «Скользящий максимум»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Smooth/MovingMaxTask.cs)
 
 [Листы и словари](https://ulearn.me/course/basicprogramming2/Listy_i_indeksatsiya_ff0b5f9b-eb8c-432d-8bab-4bfa9718469a):
-- [Практика «Readonly bytes» (Недовыполнено 25/100)](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/readonly-bytes/ReadonlyBytes.cs)
-- [Практика «Ghosts»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/ghost/GhostsTask.cs)
+- [Практика «Readonly bytes» (Недовыполнено 25/100)](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/readonly-bytes/ReadonlyBytes.cs)
+- [Практика «Ghosts»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/ghost/GhostsTask.cs)
 
 [Делегаты](https://ulearn.me/course/basicprogramming2/Postanovka_problemy_139a55f6-8e6a-4178-bccc-a152a5eecea5)
 
