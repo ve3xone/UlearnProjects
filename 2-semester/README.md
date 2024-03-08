@@ -7,7 +7,10 @@
 - [Практика «Отмена»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/LimitedSizeStack/ListModel.cs)
 - [Практика «CVS»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Clones/CloneVersionSystem.cs)
 
-[yield return](https://ulearn.me/course/basicprogramming2/foreach_IEnumerable_i_IEnumerator_49c485c2-d2a7-4362-a473-5757719bd002)
+[yield return](https://ulearn.me/course/basicprogramming2/foreach_IEnumerable_i_IEnumerator_49c485c2-d2a7-4362-a473-5757719bd002):
+- [Практика «Экспоненциальное сглаживание»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Smooth/ExpSmoothingTask.cs)
+- [Практика «Скользящее среднее»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Smooth/MovingAverageTask.cs)
+- [Практика «Скользящий максимум»](https://github.com/ve3xone/UlearnProjects/blob/main/1-semester/practices/Smooth/MovingMaxTask.cs)
 
 [Листы и словари](https://ulearn.me/course/basicprogramming2/Listy_i_indeksatsiya_ff0b5f9b-eb8c-432d-8bab-4bfa9718469a)
 
