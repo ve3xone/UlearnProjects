@@ -13,7 +13,7 @@
 - [Практика «Скользящий максимум»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Smooth/MovingMaxTask.cs)
 
 [Листы и словари](https://ulearn.me/course/basicprogramming2/Listy_i_indeksatsiya_ff0b5f9b-eb8c-432d-8bab-4bfa9718469a):
-- [Практика «Readonly bytes» (Недовыполнено 25/100)](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/readonly-bytes/ReadonlyBytes.cs)
+- [Практика «Readonly bytes»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/readonly-bytes/ReadonlyBytes.cs)
 - [Практика «Ghosts»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/ghost/GhostsTask.cs)
 
 [Делегаты](https://ulearn.me/course/basicprogramming2/Postanovka_problemy_139a55f6-8e6a-4178-bccc-a152a5eecea5)

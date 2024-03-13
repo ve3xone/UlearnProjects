@@ -15,11 +15,11 @@ public class ReadonlyBytes : IEnumerable<byte>
         this.bytes = bytes ?? throw new ArgumentNullException(nameof(bytes));
         unchecked
         {
-            var hash = 1010;
+            var hash = 2;
             for (var index = 0; index < this.bytes.Length; index++)
             {
                 var bindex = this.bytes[index];
-                hash *= 10101;
+                hash *= 1010;
                 hash += bindex;
             }
             hashCode = hash;
