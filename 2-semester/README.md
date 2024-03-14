@@ -17,6 +17,9 @@
 - [Практика «Ghosts»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/ghost/GhostsTask.cs)
 
 [Делегаты](https://ulearn.me/course/basicprogramming2/Postanovka_problemy_139a55f6-8e6a-4178-bccc-a152a5eecea5)
+- [Практика «Виртуальная машина Brainfuck»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/brainfuck/VirtualMachine.cs)
+- [Практика «Простые команды Brainfuck»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/brainfuck/BrainfuckBasicCommands.cs)
+- [Практика «Циклы Brainfuck»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/brainfuck/BrainfuckLoopCommands.cs)
 
 [Элементы функционального программирования](https://ulearn.me/course/basicprogramming2/91fef764-c971-480d-935a-28363c76888d)
 
