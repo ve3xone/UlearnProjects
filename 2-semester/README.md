@@ -16,7 +16,7 @@
 - [Практика «Readonly bytes»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/readonly-bytes/ReadonlyBytes.cs)
 - [Практика «Ghosts»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/ghost/GhostsTask.cs)
 
-[Делегаты](https://ulearn.me/course/basicprogramming2/Postanovka_problemy_139a55f6-8e6a-4178-bccc-a152a5eecea5)
+[Делегаты](https://ulearn.me/course/basicprogramming2/Postanovka_problemy_139a55f6-8e6a-4178-bccc-a152a5eecea5):
 - [Практика «Виртуальная машина Brainfuck»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/brainfuck/VirtualMachine.cs)
 - [Практика «Простые команды Brainfuck»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/brainfuck/BrainfuckBasicCommands.cs)
 - [Практика «Циклы Brainfuck»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/brainfuck/BrainfuckLoopCommands.cs)
