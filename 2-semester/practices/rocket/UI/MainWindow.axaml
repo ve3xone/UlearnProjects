@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:func_rocket.UI"
+        Width="800"
+        Height="640"
+        MinHeight="440"
+        MinWidth="400"
+        x:Class="func_rocket.UI.MainWindow"
+        Title="Pattern">
+    <Grid RowDefinitions="Auto,*">
+        <DockPanel Name="Buttons" Background="Gray" Height="40" />
+        <Viewbox Grid.Row="1"
+                 Stretch="Uniform">
+            <ui:RocketCanvas
+                Name="Canvas"
+                Width="800"
+                Height="600">
+                <Image Name="Rocket" />
+            </ui:RocketCanvas>
+        </Viewbox>
+    </Grid>
+</Window>
