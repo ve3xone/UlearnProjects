@@ -18,9 +18,9 @@ public class ForcesTask
     /// </summary>
     public static RocketForce ConvertGravityToForce(Gravity gravity, Vector spaceSize)
 	{
-        return r => gravity(spaceSize, r.Location);
-    }
-
+		return r => gravity(spaceSize, r.Location);
+	}
+	
 	/// <summary>
 	/// Суммирует все переданные силы, действующие на ракету, и возвращает суммарную силу.
 	/// </summary>
@@ -35,5 +35,5 @@ public class ForcesTask
 
             return vector;
         };
-    }
+	}
 }
