@@ -12,11 +12,11 @@ public class ForcesTask
 	{ 
 		return r => new Vector(forceValue * Math.Cos(r.Direction), forceValue * Math.Sin(r.Direction)); 
 	}
-
-    /// <summary>
-    /// Преобразует делегат силы гравитации, в делегат силы, действующей на ракету
-    /// </summary>
-    public static RocketForce ConvertGravityToForce(Gravity gravity, Vector spaceSize)
+	
+	/// <summary>
+	/// Преобразует делегат силы гравитации, в делегат силы, действующей на ракету
+	/// </summary>
+	public static RocketForce ConvertGravityToForce(Gravity gravity, Vector spaceSize)
 	{
 		return r => gravity(spaceSize, r.Location);
 	}
