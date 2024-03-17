@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 
 namespace func_rocket;
 
@@ -26,14 +26,14 @@ public class ForcesTask
 	/// </summary>
 	public static RocketForce Sum(params RocketForce[] forces)
 	{
-        return r =>
-        {
-            Vector vector = Vector.Zero;
-
-            foreach (var rocketForce in forces)
-                vector += rocketForce(r);
-
-            return vector;
-        };
+		return r =>
+		{
+			Vector vector = Vector.Zero;
+			
+			foreach (var rocketForce in forces)
+				vector += rocketForce(r);
+			
+			return vector;
+		};
 	}
 }
