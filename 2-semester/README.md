@@ -23,7 +23,7 @@
 
 [Элементы функционального программирования](https://ulearn.me/course/basicprogramming2/91fef764-c971-480d-935a-28363c76888d):
 - [Практика «Лямбды и делегаты»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket/ForcesTask.cs)
-- Практика «Уровни» (Пока что нету... крч делаю)
+- [Практика «Уровни»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket/LevelsTask.cs)
 - [Практика «Управление»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket/ControlTask.cs)
 
 [LINQ](https://ulearn.me/course/basicprogramming2/Vvedenie_3446fab2-15df-4045-ab40-abc1f3dc87c8)
