@@ -6,13 +6,13 @@ public static class BrainfuckBasicCommands
 {
     public static void RegisterTo(IVirtualMachine vm, Func<int> read, Action<char> write)
     {
-        vm.RegisterCommand('.', (machine) => write((char)machine.Memory[machine.MemoryPointer]));
-        vm.RegisterCommand(',', (machine) => { machine.Memory[machine.MemoryPointer] = (byte)read(); });
+        vm.RegisterCommand('.', (m) => write((char)m.Memory[m.MemoryPointer]));
+        vm.RegisterCommand(',', (m) => m.Memory[m.MemoryPointer] = (byte)read());
 
-        vm.RegisterCommand('+', (machine) => machine.Memory[machine.MemoryPointer] = (byte)ModuleSum(machine.Memory[machine.MemoryPointer], 1, 256));
-        vm.RegisterCommand('-', (machine) => machine.Memory[machine.MemoryPointer] = (byte)ModuleSum(machine.Memory[machine.MemoryPointer], -1, 256));
-        vm.RegisterCommand('>', (machine) => machine.MemoryPointer = ModuleSum(machine.MemoryPointer, 1, machine.Memory.Length));
-        vm.RegisterCommand('<', (machine) => machine.MemoryPointer = ModuleSum(machine.MemoryPointer, -1, machine.Memory.Length));
+        vm.RegisterCommand('+', (m) => m.Memory[m.MemoryPointer] = (byte)ModuleSum(m.Memory[m.MemoryPointer], 1, 256));
+        vm.RegisterCommand('-', (m) => m.Memory[m.MemoryPointer] = (byte)ModuleSum(m.Memory[m.MemoryPointer], -1, 256));
+        vm.RegisterCommand('>', (m) => m.MemoryPointer = ModuleSum(m.MemoryPointer, 1, m.Memory.Length));
+        vm.RegisterCommand('<', (m) => m.MemoryPointer = ModuleSum(m.MemoryPointer, -1, m.Memory.Length));
 
         RegisterCommandForSymbolRange(vm, 'A', 'Z');
         RegisterCommandForSymbolRange(vm, 'a', 'z');
