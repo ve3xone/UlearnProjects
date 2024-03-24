@@ -6,6 +6,7 @@ namespace func_rocket;
 public static class LevelsTask
 {
     private const double PIDivTwo = (-Math.PI / 2);
+
     private static readonly Physics standardPhysics = new();
     private static readonly Vector standartRocketPos = new(200, 500);
     private static readonly Vector standartTargetPos = new(600, 200);
@@ -21,7 +22,6 @@ public static class LevelsTask
         var d = (g - v).Length;
         return (g - v).Normalize() * (300 * d / (d * d + 1));
     };
-
 
     public static IEnumerable<Level> CreateLevels()
     {
