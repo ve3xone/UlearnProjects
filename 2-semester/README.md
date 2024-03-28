@@ -68,7 +68,9 @@
 - Практика «Оптимальный маршрут» (пока что не делал)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-optimalnyi-marshrut)
 
-[Многопоточное программирование](https://ulearn.me/course/basicprogramming2/Tredy_domeny_i_protsessy_4dd557b3-7903-4ff4-932a-a95b4a7fb15f)
+[Многопоточное программирование](https://ulearn.me/course/basicprogramming2/Tredy_domeny_i_protsessy_4dd557b3-7903-4ff4-932a-a95b4a7fb15f):
+- Практика «Поток для AI» (пока что не делал)
+- Практика «Параллельный AI» (пока что не делал)
 
 [Динамическое программирование](https://ulearn.me/course/basicprogramming2/6fb7616f-509b-4747-93d1-d9d80914c76b)
 
