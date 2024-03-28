@@ -72,7 +72,13 @@
 - Практика «Поток для AI» (пока что не делал)
 - Практика «Параллельный AI» (пока что не делал)
 
-[Динамическое программирование](https://ulearn.me/course/basicprogramming2/6fb7616f-509b-4747-93d1-d9d80914c76b)
+[Динамическое программирование](https://ulearn.me/course/basicprogramming2/6fb7616f-509b-4747-93d1-d9d80914c76b):
+- Практика «Антиплагиат» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-antiplagiat)
+- Практика «Diff Tool» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-diff-tool)
+- Практика «Счастливые билеты» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-schastlivye-bilety)
 
 [Структуры данных](https://ulearn.me/course/basicprogramming2/Ochered_s_prioritetami_0dd9a1e8-c370-493d-b384-94c62f04bf34)
 
