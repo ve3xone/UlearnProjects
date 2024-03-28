@@ -40,7 +40,14 @@
 - [Практика «Управление»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket/ControlTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-upravlenie)
 
-[LINQ](https://ulearn.me/course/basicprogramming2/Vvedenie_3446fab2-15df-4045-ab40-abc1f3dc87c8)
+[LINQ](https://ulearn.me/course/basicprogramming2/Vvedenie_3446fab2-15df-4045-ab40-abc1f3dc87c8):
+- [Практика «Median & Bigrams»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket/ForcesTask.cs)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-median-bigrams)
+- Практика «Чтение файла» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-chtenie-faila)
+- Практика «Статистика» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-statistika)
+- Практика «Метод Гаусса» (пока что не делал)
 
 [Оконные приложения](https://ulearn.me/course/basicprogramming2/Sobytiynaya_model__73d69c1f-e3ac-4568-9473-8b0d0a522225)
 
