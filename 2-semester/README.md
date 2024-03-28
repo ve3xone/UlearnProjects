@@ -60,7 +60,13 @@
 - Практика «Поделить территорию!» (пока что не делал)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-podelit-territoriu)
 
-[Жадные алгоритмы](https://ulearn.me/course/basicprogramming2/Kombinatornye_zadachi_8661d8aa-fdc5-4185-8ba3-5651b18acd48)
+[Жадные алгоритмы](https://ulearn.me/course/basicprogramming2/Kombinatornye_zadachi_8661d8aa-fdc5-4185-8ba3-5651b18acd48):
+- Практика «Путь в лабиринте» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-put-v-labirinte)
+- Практика «Жадина в лабиринте» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-zhadina-v-labirinte)
+- Практика «Оптимальный маршрут» (пока что не делал)
+    - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-optimalnyi-marshrut)
 
 [Многопоточное программирование](https://ulearn.me/course/basicprogramming2/Tredy_domeny_i_protsessy_4dd557b3-7903-4ff4-932a-a95b4a7fb15f)
 
