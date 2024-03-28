@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>linq_slideviews</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>linq_slideviews.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="*.WrongAnswer.*" />
+    <Compile Remove="*.Initial.*" />
+    <Content Include="*.WrongAnswer.*" />
+    <Content Include="*.Initial.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="*.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="*\*.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+</Project>
