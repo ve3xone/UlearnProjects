@@ -49,7 +49,8 @@
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-statistika)
 - Практика «Метод Гаусса» (пока что не делал)
 
-[Оконные приложения](https://ulearn.me/course/basicprogramming2/Sobytiynaya_model__73d69c1f-e3ac-4568-9473-8b0d0a522225)
+[Оконные приложения](https://ulearn.me/course/basicprogramming2/Sobytiynaya_model__73d69c1f-e3ac-4568-9473-8b0d0a522225):
+- Практика «Игра» (пока не делал, но как начну, прикреплю ссылку на отдельный репозиторий)
 
 [Графы и обходы](https://ulearn.me/course/basicprogramming2/Opredelenie_grafa_1525edc4-1193-48ea-8f9a-061647cd469e)
 
