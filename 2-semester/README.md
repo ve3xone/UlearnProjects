@@ -41,7 +41,7 @@
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-upravlenie)
 
 [LINQ](https://ulearn.me/course/basicprogramming2/Vvedenie_3446fab2-15df-4045-ab40-abc1f3dc87c8):
-- [Практика «Median & Bigrams»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket/ForcesTask.cs)
+- [Практика «Median & Bigrams»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/linq-slideviews/ExtensionsTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-median-bigrams)
 - Практика «Чтение файла» (пока что не делал)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-chtenie-faila)
