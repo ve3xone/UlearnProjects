@@ -88,4 +88,5 @@
 - Практика «Disk Tree» (пока что не делал)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-disk-tree)
 
-[Рефлексия типов](https://ulearn.me/course/basicprogramming2/Refleksiya_Klass_Type_8386b127-ea69-465d-87ba-24e08df9f6d2)
+[Рефлексия типов](https://ulearn.me/course/basicprogramming2/Refleksiya_Klass_Type_8386b127-ea69-465d-87ba-24e08df9f6d2):
+- Практика «Документация» (пока что не делал)
