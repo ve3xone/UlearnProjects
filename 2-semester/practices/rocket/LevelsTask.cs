@@ -15,15 +15,14 @@ public static class LevelsTask
     private static readonly Gravity whiteHole = (size, v) =>
     {
         var d = v - standartTargetPos;
-        var l = d.Length;
-        return d.Normalize() * (140 * l / (l * l + 1));
+        return d.Normalize() * (140 * d.Length / ((d.Length * d.Length) + 1));
     };
 
     private static readonly Gravity blackHole = (size, v) =>
     {
-        var g = (standartTargetPos - standartRocketPos) / 2 + standartRocketPos;
-        var d = (g - v).Length;
-        return (g - v).Normalize() * (300 * d / (d * d + 1));
+        var anomaly = (standartTargetPos - standartRocketPos) / 2 + standartRocketPos;
+        var d = (anomaly - v);
+        return d.Normalize() * (300 * d.Length / (d.Length * d.Length + 1));
     };
 
     private static readonly Gravity blackAndWhiteHoles = (size, v) =>
