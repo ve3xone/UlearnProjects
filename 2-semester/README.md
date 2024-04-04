@@ -43,11 +43,11 @@
 [LINQ](https://ulearn.me/course/basicprogramming2/Vvedenie_3446fab2-15df-4045-ab40-abc1f3dc87c8):
 - [Практика «Median & Bigrams»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/linq-slideviews/ExtensionsTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-median-bigrams)
-- Практика «Чтение файла» (пока что не делал)
+- [Практика «Чтение файла»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/linq-slideviews/ParsingTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-chtenie-faila)
-- Практика «Статистика» (пока что не делал)
+- [Практика «Статистика»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/linq-slideviews/StatisticsTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-statistika)
-- Практика «Метод Гаусса» (пока что не делал)
+- [Практика «Метод Гаусса»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/GaussAlgorithm/Solver.cs)
 
 [Оконные приложения](https://ulearn.me/course/basicprogramming2/Sobytiynaya_model__73d69c1f-e3ac-4568-9473-8b0d0a522225):
 - Практика «Игра» (пока не делал, но как начну, прикреплю ссылку на отдельный репозиторий)
