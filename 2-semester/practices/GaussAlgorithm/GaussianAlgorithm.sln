@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaussianAlgorithm", "GaussianAlgorithm.csproj", "{0B99D7EE-A598-4A71-9AF5-8FA8CC0818BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B99D7EE-A598-4A71-9AF5-8FA8CC0818BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B99D7EE-A598-4A71-9AF5-8FA8CC0818BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B99D7EE-A598-4A71-9AF5-8FA8CC0818BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B99D7EE-A598-4A71-9AF5-8FA8CC0818BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58FC3268-5C63-49DA-87AE-99360DB0BEC4}
+	EndGlobalSection
+EndGlobal
