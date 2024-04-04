@@ -50,7 +50,7 @@
 - [Практика «Метод Гаусса»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/GaussAlgorithm/Solver.cs)
 
 [Оконные приложения](https://ulearn.me/course/basicprogramming2/Sobytiynaya_model__73d69c1f-e3ac-4568-9473-8b0d0a522225):
-- Практика «Игра» (пока не делал, но как начну, прикреплю ссылку на отдельный репозиторий)
+- [Практика «Игра»](https://github.com/ve3xone/BloodyPath) (начал делать, разбираться, делаю на monogame, 2d fighting)
 
 [Графы и обходы](https://ulearn.me/course/basicprogramming2/Opredelenie_grafa_1525edc4-1193-48ea-8f9a-061647cd469e):
 - Практика «Поиск в ширину» (пока что не делал)
