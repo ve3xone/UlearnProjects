@@ -25,9 +25,8 @@ public class StatisticsTask
            TotalTime(singleVisit.OrderBy(visit => visit.DateTime).Bigrams(), minutes, slideType);
        }
 
-       var filteredMinutes = minutes.Where(time =>
-                                           time >= TimeSpan.FromMinutes(1).TotalMinutes &&
-                                           time <= TimeSpan.FromMinutes(120).TotalMinutes);
+       var filteredMinutes = minutes.Where(time => time >= TimeSpan.FromMinutes(1).TotalMinutes
+                                                   && time <= TimeSpan.FromHours(2).TotalMinutes);
        if (!filteredMinutes.Any())
            return 0;
 
