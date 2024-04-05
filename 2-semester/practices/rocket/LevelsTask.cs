@@ -5,8 +5,6 @@ namespace func_rocket;
 
 public static class LevelsTask
 {
-    private const double PiDivTwo = (-Math.PI / 2);
-
     private static readonly Physics standardPhysics = new();
 
     private static readonly Vector standartRocketPos = new(200, 500);
@@ -15,14 +13,14 @@ public static class LevelsTask
     private static readonly Gravity whiteHole = (size, v) =>
     {
         var d = v - standartTargetPos;
-        return d.Normalize() * (140 * d.Length / ((d.Length * d.Length) + 1));
+        return 140 * d / ((d.Length * d.Length) + 1);
     };
 
     private static readonly Gravity blackHole = (size, v) =>
     {
         var anomaly = (standartTargetPos - standartRocketPos) / 2 + standartRocketPos;
-        var d = (anomaly - v);
-        return d.Normalize() * (300 * d.Length / (d.Length * d.Length + 1));
+        var d = anomaly - v;
+        return 300 * d / (d.Length * d.Length + 1);
     };
 
     private static readonly Gravity blackAndWhiteHoles = (size, v) =>
@@ -30,7 +28,7 @@ public static class LevelsTask
         return (whiteHole(size, v) + blackHole(size, v)) / 2;
     };
 
-    private static Rocket InitializeRocket() => new(standartRocketPos, Vector.Zero, PiDivTwo);
+    private static Rocket InitializeRocket() => new(standartRocketPos, Vector.Zero, -Math.PI / 2);
 
     private static Level CreateLevel(string name, Vector targetPos, Gravity gravity)
     {
