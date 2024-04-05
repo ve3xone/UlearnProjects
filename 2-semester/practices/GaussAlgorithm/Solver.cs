@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Linq;
 
 namespace GaussAlgorithm;
@@ -88,7 +88,7 @@ public class Solver
             if (solution[col] != 0) columnsLeft--;
         }
 
-        if (columnsLeft > 0) throw new NoSolutionException("—ËÒÚÂÏ‡ Û‡‚ÌÂÌËÈ ÌÂ ÏÓÊÂÚ ·˚Ú¸ Â¯ÂÌ‡");
+        if (columnsLeft > 0) throw new NoSolutionException("–°–∏—Å—Ç–µ–º–∞ —É—Ä–∞–≤–Ω–µ–Ω–∏–π –Ω–µ –º–æ–∂–µ—Ç –±—ã—Ç—å —Ä–µ—à–µ–Ω–∞");
         return solution;
     }
 }
