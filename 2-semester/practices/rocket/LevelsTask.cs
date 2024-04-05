@@ -7,8 +7,9 @@ public static class LevelsTask
 {
     private static readonly Physics standardPhysics = new();
 
-    private static readonly Vector standartRocketPos = new(200, 500);
     private static readonly Vector standartTargetPos = new(600, 200);
+
+    private static Rocket standartRocket => new(new Vector(200, 500), Vector.Zero, -Math.PI / 2);
 
     private static readonly Gravity whiteHole = (size, v) =>
     {
@@ -18,7 +19,7 @@ public static class LevelsTask
 
     private static readonly Gravity blackHole = (size, v) =>
     {
-        var anomaly = (standartTargetPos - standartRocketPos) / 2 + standartRocketPos;
+        var anomaly = (standartTargetPos - standartRocket.Location) / 2 + standartRocket.Location;
         var d = anomaly - v;
         return 300 * d / (d.Length * d.Length + 1);
     };
@@ -28,11 +29,9 @@ public static class LevelsTask
         return (whiteHole(size, v) + blackHole(size, v)) / 2;
     };
 
-    private static Rocket InitializeRocket() => new(standartRocketPos, Vector.Zero, -Math.PI / 2);
-
     private static Level CreateLevel(string name, Vector targetPos, Gravity gravity)
     {
-        return new Level(name, InitializeRocket(), targetPos, gravity, standardPhysics);
+        return new Level(name, standartRocket, targetPos, gravity, standardPhysics);
     }
 
     public static IEnumerable<Level> CreateLevels()
