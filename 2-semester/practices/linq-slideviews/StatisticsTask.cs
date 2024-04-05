@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace linq_slideviews;
@@ -24,7 +25,9 @@ public class StatisticsTask
            TotalTime(singleVisit.OrderBy(visit => visit.DateTime).Bigrams(), minutes, slideType);
        }
 
-       var filteredMinutes = minutes.Where(time => time >= 1 && time <= 120);
+       var filteredMinutes = minutes.Where(time =>
+                                           time >= TimeSpan.FromMinutes(1).TotalMinutes &&
+                                           time <= TimeSpan.FromMinutes(120).TotalMinutes);
        if (!filteredMinutes.Any())
            return 0;
 
