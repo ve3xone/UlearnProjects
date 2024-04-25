@@ -1,0 +1,10 @@
+3111
+|
+goal / energy
+2 6
+|
+position
+1 0
+|
+0 0
+3 0
