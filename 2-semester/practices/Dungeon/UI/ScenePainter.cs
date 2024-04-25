@@ -18,14 +18,14 @@ public class ScenePainter : Canvas
 
 	private Point lastMouseClick;
 	private IEnumerable<List<Point>> pathsToChests;
-	private Bitmap grass;
-	private Bitmap path;
-	private Bitmap peasant;
-	private Bitmap castle;
-	private Bitmap chest;
+	private Bitmap grassImg;
+	private Bitmap pathImg;
+	private Bitmap peasantImg;
+	private Bitmap castleImg;
+	private Bitmap chestImg;
 
-	private double cellWidth => grass.Size.Width;
-	private double cellHeight => grass.Size.Height;
+	private double cellWidth => grassImg.Size.Width;
+	private double cellHeight => grassImg.Size.Height;
 
 	public ScenePainter()
 	{
@@ -47,11 +47,11 @@ public class ScenePainter : Canvas
 	{
 		var resourcesPrefix = "UI/Images/";
 
-		grass = new Bitmap($"{resourcesPrefix}Grass.png");
-		path = new Bitmap($"{resourcesPrefix}Path.png");
-		peasant = new Bitmap($"{resourcesPrefix}Peasant.png");
-		castle = new Bitmap($"{resourcesPrefix}Castle.png");
-		chest = new Bitmap($"{resourcesPrefix}Chest.png");
+		grassImg = new Bitmap($"{resourcesPrefix}Grass.png");
+		pathImg = new Bitmap($"{resourcesPrefix}Path.png");
+		peasantImg = new Bitmap($"{resourcesPrefix}Peasant.png");
+		castleImg = new Bitmap($"{resourcesPrefix}Castle.png");
+		chestImg = new Bitmap($"{resourcesPrefix}Chest.png");
 	}
 
 	public void ChangeLevel(Map newMap)
@@ -103,10 +103,10 @@ public class ScenePainter : Canvas
 	private void DrawLevel(DrawingContext context)
 	{
 		RenderMap(context);
-		foreach (var chestPoint in currentMap.Chests)
-			context.DrawImage(chest,
-				new Rect(chestPoint.X * cellWidth, chestPoint.Y * cellHeight, cellWidth, cellHeight));
-		context.DrawImage(castle,
+		foreach (var chest in currentMap.Chests)
+			context.DrawImage(chestImg,
+				new Rect(chest.Location.X * cellWidth, chest.Location.Y * cellHeight, cellWidth, cellHeight));
+		context.DrawImage(castleImg,
 			new Rect(currentMap.Exit.X * cellWidth, currentMap.Exit.Y * cellHeight, cellWidth, cellHeight));
 	}
 
@@ -125,7 +125,7 @@ public class ScenePainter : Canvas
 		var path = paths[currentMap].Take(interation + 1).ToArray();
 		DrawPath(context, Colors.Green, path);
 		var position = path[^1];
-		context.DrawImage(peasant, new Rect(position.X * cellWidth, position.Y * cellHeight, cellWidth, cellHeight));
+		context.DrawImage(peasantImg, new Rect(position.X * cellWidth, position.Y * cellHeight, cellWidth, cellHeight));
 	}
 
 	private void DrawAdditionalPaths(DrawingContext context, Point lastClick)
@@ -151,15 +151,15 @@ public class ScenePainter : Canvas
 
 	private void RenderMap(DrawingContext context)
 	{
-		var cellWidth = grass.Size.Width;
-		var cellHeight = grass.Size.Height;
+		var cellWidth = grassImg.Size.Width;
+		var cellHeight = grassImg.Size.Height;
 		var width = currentMap.Dungeon.GetLength(0);
 		var height = currentMap.Dungeon.GetLength(1);
 		for (var x = 0; x < width; x++)
 		{
 			for (var y = 0; y < height; y++)
 			{
-				var image = currentMap.Dungeon[x, y] == MapCell.Wall ? grass : path;
+				var image = currentMap.Dungeon[x, y] == MapCell.Wall ? grassImg : pathImg;
 				context.DrawImage(image, new Rect(x * cellWidth, y * cellHeight, cellWidth, cellHeight));
 			}
 		}

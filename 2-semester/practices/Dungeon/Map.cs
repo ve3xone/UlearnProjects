@@ -8,9 +8,9 @@ public class Map
 	public readonly MapCell[,] Dungeon;
 	public readonly Point InitialPosition;
 	public readonly Point Exit;
-	public readonly Point[] Chests;
+	public readonly Chest[] Chests;
 
-	private Map(MapCell[,] dungeon, Point initialPosition, Point exit, Point[] chests)
+	private Map(MapCell[,] dungeon, Point initialPosition, Point exit, Chest[] chests)
 	{
 		Dungeon = dungeon;
 		InitialPosition = initialPosition;
@@ -29,7 +29,7 @@ public class Map
 		var dungeon = new MapCell[lines[0].Length, lines.Length];
 		var initialPosition = new Point();
 		var exit = new Point();
-		var chests = new List<Point>();
+		var chests = new List<Chest>();
 		for (var y = 0; y < lines.Length; y++)
 		{
 			for (var x = 0; x < lines[0].Length; x++)
@@ -43,16 +43,16 @@ public class Map
 						dungeon[x, y] = MapCell.Empty;
 						initialPosition = new Point(x, y);
 						break;
-					case 'C':
-						dungeon[x, y] = MapCell.Empty;
-						chests.Add(new Point(x, y));
-						break;
 					case 'E':
 						dungeon[x, y] = MapCell.Empty;
 						exit = new Point(x, y);
 						break;
+					case ' ':
+						dungeon[x, y] = MapCell.Empty;
+						break;
 					default:
 						dungeon[x, y] = MapCell.Empty;
+						chests.Add(new Chest(new Point(x, y), byte.Parse(lines[y][x].ToString())));
 						break;
 				}
 			}

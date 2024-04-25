@@ -15,7 +15,7 @@ public class Bfs_Should
 		{
 			"P ",
 			"##",
-			"C "
+			"0 "
 		};
 		var map = Map.FromLines(textMap);
 
@@ -30,7 +30,7 @@ public class Bfs_Should
 		var textMap = new[]
 		{
 			"P ",
-			"C "
+			"0 "
 		};
 		var map = Map.FromLines(textMap);
 		var expectedLengths = new[] { 2 };
@@ -47,7 +47,7 @@ public class Bfs_Should
 		{
 			"P #",
 			"# #",
-			"C  "
+			"0  "
 		};
 		var map = Map.FromLines(textMap);
 		var expectedLengths = new[] { 5 };
@@ -64,7 +64,7 @@ public class Bfs_Should
 		{
 			"   ",
 			" P ",
-			" C "
+			" 0 "
 		};
 		var map = Map.FromLines(textMap);
 		var expectedLengths = new[] { 2 };
@@ -79,9 +79,9 @@ public class Bfs_Should
 	{
 		var textMap = new[]
 		{
-			" C ",
-			"CPC",
-			" C "
+			" 0 ",
+			"0P0",
+			" 0 "
 		};
 		var map = Map.FromLines(textMap);
 		var expectedLengths = new[] { 2, 2, 2, 2 };
@@ -96,8 +96,8 @@ public class Bfs_Should
 	{
 		var textMap = new[]
 		{
-			"CC",
-			"CP",
+			"00",
+			"0P",
 		};
 		var map = Map.FromLines(textMap);
 		var expectedLengths = new[] { 3, 2, 2 };
@@ -128,9 +128,9 @@ public class Bfs_Should
 		var miniMap = Map.FromLines(new[]
 
 		{
-			" C ",
-			"CPC",
-			" C "
+			" 0 ",
+			"0P0",
+			" 0 "
 		});
 		var miniPaths = GetPaths(miniMap);
 
@@ -173,7 +173,7 @@ public class Bfs_Should
 	{
 		var directions = Walker.PossibleDirections.ToList();
 		Assert.IsNotEmpty(path, "path should not be empty");
-		Assert.Contains(path[0], map.Chests, $"The first point in the path should be one of the chest, but was {path[0]}");
+		Assert.Contains(path[0], map.Chests.Select(x => x.Location).ToArray(), $"The first point in the path should be one of the chest, but was {path[0]}");
 		for (var i = 0; i < path.Count - 1; i++)
 		{
 			var offset = path[i + 1] - path[i];

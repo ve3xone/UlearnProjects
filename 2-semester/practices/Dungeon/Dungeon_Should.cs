@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Avalonia;
+using System.Linq;
 using Dungeon.Dungeons;
 using NUnit.Framework;
 
@@ -15,7 +15,7 @@ public class Dungeon_Should
 		{
 			"PE#",
 			"###",
-			"C  "
+			"0  "
 		};
 		var map = Map.FromLines(textMap);
 
@@ -46,7 +46,7 @@ public class Dungeon_Should
 		{
 			"P ",
 			"##",
-			"CE"
+			"0E"
 		};
 		var map = Map.FromLines(textMap);
 
@@ -60,9 +60,9 @@ public class Dungeon_Should
 	{
 		var textMap = new[]
 		{
-			"PC",
+			"P0",
 			"##",
-			"CE"
+			"0E"
 		};
 		var map = Map.FromLines(textMap);
 
@@ -92,7 +92,7 @@ public class Dungeon_Should
 		var textMap = new[]
 		{
 			"P ",
-			"CE"
+			"0E"
 		};
 		var map = Map.FromLines(textMap);
 
@@ -107,7 +107,7 @@ public class Dungeon_Should
 		var textMap = new[]
 		{
 			"P #",
-			"#C#",
+			"#6#",
 			"E  "
 		};
 		var map = Map.FromLines(textMap);
@@ -116,21 +116,92 @@ public class Dungeon_Should
 
 		Assert.AreEqual(new[] {MoveDirection.Right, MoveDirection.Down, MoveDirection.Down, MoveDirection.Left}, path);
 	}
+	
+	[Test]
+	public void ReturnCorrectPath_WhenMultiplePaths_OnEmptyDungeon()
+	{
+		var textMap = new[]
+		{
+			"P  ",
+			"45 ",
+			"E  "
+		};
+		var map = Map.FromLines(textMap);
 
+		var path = DungeonTask.FindShortestPath(map);
+
+		Assert.AreEqual(new[] {MoveDirection.Down, MoveDirection.Down}, path);
+	}
+	
+	[Test]
+	public void ReturnCorrectPath_WhenMultiplePaths_OnSimpleDungeon()
+	{
+		var textMap = new[]
+		{
+			"P 5",
+			"#7 ",
+			"##E"
+		};
+		var map = Map.FromLines(textMap);
+
+		var path = DungeonTask.FindShortestPath(map);
+
+		Assert.AreEqual(new[] {MoveDirection.Right, MoveDirection.Down, MoveDirection.Right, MoveDirection.Down}, path);
+	}
+	
+	[Test]
+	public void ReturnCorrectPath_WhenMultiplePaths_OnHardDungeon()
+	{
+		var textMap = new[]
+		{
+			"P#9",
+			" 56",
+			"# E"
+		};
+		var map = Map.FromLines(textMap);
+
+		var path = DungeonTask.FindShortestPath(map);
+
+		Assert.AreEqual(new[] {MoveDirection.Down, MoveDirection.Right, MoveDirection.Right, MoveDirection.Down}, path);
+	}
+	
+	[Test]
+	public void ReturnCorrectPath_WhenMultipleEqualPaths()
+	{
+		var textMap = new[]
+		{
+			"P##",
+			" 66",
+			"66E"
+		};
+		var map = Map.FromLines(textMap);
+
+		var path = DungeonTask.FindShortestPath(map);
+
+		var expected = new[]
+		{
+			new[] { MoveDirection.Down, MoveDirection.Right, MoveDirection.Right, MoveDirection.Down },
+			new[] { MoveDirection.Down, MoveDirection.Right, MoveDirection.Down, MoveDirection.Right },
+			new[] { MoveDirection.Down, MoveDirection.Down, MoveDirection.Right, MoveDirection.Right }
+		};
+
+		Assert.Contains(path, expected);
+	}
+	
 	[Test]
 	public void Return_ShortestPath1()
 	{
 		var textMap = new[]
 		{
 			"   ",
-			" P ",
-			" CE"
+			" P9",
+			" 0E"
 		};
 		var map = Map.FromLines(textMap);
 
 		var path = DungeonTask.FindShortestPath(map);
 
-		Assert.AreEqual(new[] {MoveDirection.Down, MoveDirection.Right}, path);
+		Assert.AreEqual(new[] {MoveDirection.Right, MoveDirection.Down}, path);
 	}
 
 	[Test]
@@ -138,15 +209,21 @@ public class Dungeon_Should
 	{
 		var textMap = new[]
 		{
-			"ECC",
-			" P ",
-			"CCC"
+			"E59",
+			"5P ",
+			"999"
 		};
 		var map = Map.FromLines(textMap);
 
 		var path = DungeonTask.FindShortestPath(map);
 
-		Assert.AreEqual(new[] {MoveDirection.Up, MoveDirection.Left}, path);
+		var expected = new[]
+		{
+			new []{ MoveDirection.Left, MoveDirection.Up },
+			new [] { MoveDirection.Up, MoveDirection.Left }
+		};
+
+		Assert.Contains(path, expected);
 	}
 
 	[Test]
@@ -163,14 +240,14 @@ public class Dungeon_Should
 	private void IsValidPath(Map map, MoveDirection[] path, int expectedPathLength)
 	{
 		var chestTaken = false;
-		var chestSet = new HashSet<Point>(map.Chests);
+		var chestsPoints = new HashSet<Point>(map.Chests.Select(c => c.Location));
 		var walker = new Walker(map.InitialPosition);
 		foreach (var step in path)
 		{
 			walker = walker.WalkInDirection(map, step);
 			if (!walker.PointOfCollision.IsNull)
 				Assert.Fail($"Collided with wall at {walker.PointOfCollision}");
-			if (chestSet.Contains(walker.Position))
+			if (chestsPoints.Contains(walker.Position))
 				chestTaken = true;
 		}
 		Assert.True(chestTaken, "Player did not take any chest.");
