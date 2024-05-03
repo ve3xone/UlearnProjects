@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:rocket_bot.UI"
+        Width="800"
+        Height="680"
+        x:Class="rocket_bot.UI.MainWindow">
+    <Grid RowDefinitions="*,140">
+        <Viewbox
+            Stretch="Uniform">
+            <ui:RocketCanvas
+                Name="Canvas"
+                Width="800"
+                Height="540">
+                <Image Name="RocketImage" />
+            </ui:RocketCanvas>
+        </Viewbox>
+        <Grid Grid.Row="1" RowDefinitions="20,Auto,40">
+            <Panel Background="DimGray">
+                <Panel
+                    Name="Precalculation"
+                    Background="MediumSeaGreen"
+                    HorizontalAlignment="Left">
+                    <TextBlock Margin="20,0,0,0" Name="Status">Precalculation Status</TextBlock>
+                </Panel>
+            </Panel>
+            <Slider
+                Grid.Row="1"
+                Name="RewindTrackBar"
+                Margin="20,0,20,0"
+                IsTabStop="False"
+                TickFrequency="10"
+                LargeChange="100" />
+            <DockPanel
+                Grid.Row="2"
+                Name="Buttons"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsTabStop="False"
+                TabIndex="1" />
+        </Grid>
+    </Grid>
+</Window>
