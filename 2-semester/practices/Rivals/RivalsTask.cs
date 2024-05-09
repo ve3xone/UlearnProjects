@@ -5,7 +5,7 @@ namespace Rivals
 {
     public class RivalsTask
     {
-        private static readonly Point[] DirectionsPoints =
+        private static readonly Point[] directionsPoints =
         {
             new Point(1, 0),
             new Point(-1, 0),
@@ -29,8 +29,8 @@ namespace Rivals
             return points.Values;
         }
 
-        private static void InitializePlayers(Map map,
-                                              Dictionary<Point, OwnedLocation> points,
+        private static void InitializePlayers(Map map, 
+                                              Dictionary<Point, OwnedLocation> points, 
                                               Queue<Point> queue)
         {
             for (int i = 0; i < map.Players.Length; i++)
@@ -41,16 +41,16 @@ namespace Rivals
             }
         }
 
-        private static void ExploreNeighbors(Point point, Map map,
-                                             Dictionary<Point, OwnedLocation> points,
+        private static void ExploreNeighbors(Point point, Map map, 
+                                             Dictionary<Point, OwnedLocation> points, 
                                              Queue<Point> queue, HashSet<Point> chests)
         {
             foreach (var nextPoint in GetNextPoints(point, map, points))
             {
                 if (IsValidMove(nextPoint, map, points))
                 {
-                    points.Add(nextPoint, new OwnedLocation(points[point].Owner,
-                                                            nextPoint,
+                    points.Add(nextPoint, new OwnedLocation(points[point].Owner, 
+                                                            nextPoint, 
                                                             points[point].Distance + 1));
                     if (!chests.Contains(nextPoint))
                         queue.Enqueue(nextPoint);
@@ -58,14 +58,14 @@ namespace Rivals
             }
         }
 
-        private static IEnumerable<Point> GetNextPoints(Point point, Map map,
+        private static IEnumerable<Point> GetNextPoints(Point point, Map map, 
                                                         Dictionary<Point, OwnedLocation> points)
         {
-            return DirectionsPoints.Select(direction => direction + point)
+            return directionsPoints.Select(direction => direction + point)
                                    .Where(nextPoint => IsValidMove(nextPoint, map, points));
         }
 
-        private static bool IsValidMove(Point point, Map map,
+        private static bool IsValidMove(Point point, Map map, 
                                         Dictionary<Point, OwnedLocation> points)
         {
             return !points.ContainsKey(point) &&
