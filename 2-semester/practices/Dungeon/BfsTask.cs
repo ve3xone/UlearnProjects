@@ -8,9 +8,8 @@ public static class BfsTask
     public static IEnumerable<SinglyLinkedList<Point>> FindPaths(Map map, Point start, Chest[] chests)
     {
         var queue = new Queue<SinglyLinkedList<Point>>();
-        var visited = new HashSet<Point>();
-        var chestLocations = chests.Select(chest => chest.Location);
-        visited.Add(start);
+        var visited = new HashSet<Point> { start };
+        var chestLocations = new HashSet<Point>(chests.Select(chest => chest.Location));
         queue.Enqueue(new SinglyLinkedList<Point>(start));
 
         while (queue.Count > 0)
