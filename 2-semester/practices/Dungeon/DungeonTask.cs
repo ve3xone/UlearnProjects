@@ -8,10 +8,7 @@ public class DungeonTask
     public static MoveDirection[] FindShortestPath(Map map)
     {
         var fromStartToChests = BfsTask.FindPaths(map, map.InitialPosition, map.Chests);
-        
-        // Это для того чтоб сократить время (Large_Zigzag_Map) [Секретный тест]
-        // Если честно почему-то работает через раз
-        // Как будто это от машины зависит где компилируется... хз крч.
+
         var allChestsVisited = map.Chests.Select(c => c.Location).ToHashSet();
         var chestsArray = allChestsVisited.Select(p => new EmptyChest(p)).ToArray();
 
@@ -36,13 +33,13 @@ public class DungeonTask
     private static IEnumerable<Point>? FindPathFromStartToExit(Map map)
     {
         return BfsTask.FindPaths(map,
-                                             map.InitialPosition,
-                                             new Chest[] { new EmptyChest(map.Exit) })
-                                            .FirstOrDefault();
+                                 map.InitialPosition,
+                                 new Chest[] { new EmptyChest(map.Exit) })
+                                .FirstOrDefault();
     }
 
     private static IEnumerable<IEnumerable<Point>>? CombinePaths(IEnumerable<SinglyLinkedList<Point>> fromStartToChests,
-                                                                                                    IEnumerable<SinglyLinkedList<Point>> fromExitToChests)
+                                                                 IEnumerable<SinglyLinkedList<Point>> fromExitToChests)
     {
         return fromStartToChests
                .Join(fromExitToChests, startPath => startPath.Value, exitPath => exitPath.Value,
