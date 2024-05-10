@@ -6,6 +6,7 @@ namespace Antiplagiarism;
 
 public class LevenshteinCalculator
 {
+    // Для ulearn нужно уберать у всех static
     public static List<ComparisonResult> CompareDocumentsPairwise(List<DocumentTokens> documents)
     {
         var comparisonResults = new List<ComparisonResult>();
