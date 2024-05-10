@@ -6,7 +6,6 @@ namespace Antiplagiarism;
 
 public class LevenshteinCalculator
 {
-    //Для ulearn нужно убрать на всех методах static
     public static List<ComparisonResult> CompareDocumentsPairwise(List<DocumentTokens> documents)
     {
         var comparisonResults = new List<ComparisonResult>();
@@ -27,47 +26,47 @@ public class LevenshteinCalculator
 
     private static double ComputeLevenshteinDistance(DocumentTokens first, DocumentTokens second)
     {
-        var previousOptions = InitializePreviousOptions(second.Count);
-        var currentOptions = new double[second.Count + 1];
+        var previousOpt = InitializePreviousOpt(second.Count);
+        var currentOpt = new double[second.Count + 1];
 
         for (var i = 1; i <= first.Count; ++i)
         {
-            currentOptions[0] = i;
+            currentOpt[0] = i;
 
-            CalculateCurrentOptions(first, second, previousOptions, currentOptions, i);
+            CalculateCurrentOpt(first, second, previousOpt, currentOpt, i);
 
-            Array.Copy(currentOptions, previousOptions, second.Count + 1);
+            Array.Copy(currentOpt, previousOpt, second.Count + 1);
         }
 
-        return currentOptions[second.Count];
+        return currentOpt[second.Count];
     }
 
-    private static double[] InitializePreviousOptions(int length)
+    private static double[] InitializePreviousOpt(int length)
     {
-        var options = new double[length + 1];
+        var opt = new double[length + 1];
         for (var i = 0; i <= length; ++i)
-            options[i] = i;
-        return options;
+            opt[i] = i;
+        return opt;
     }
 
-    private static void CalculateCurrentOptions(DocumentTokens first, DocumentTokens second,
-                                                double[] previousOptions, double[] currentOptions, int i)
+    private static void CalculateCurrentOpt(DocumentTokens first, DocumentTokens second,
+                                     double[] previousOpt, double[] currentOpt, int i)
     {
         for (var j = 1; j <= second.Count; ++j)
         {
             if (first[i - 1] == second[j - 1])
-                currentOptions[j] = previousOptions[j - 1];
+                currentOpt[j] = previousOpt[j - 1];
             else
-                currentOptions[j] = CalculateMinimumDistance(first[i - 1], second[j - 1],
-                                                             previousOptions, currentOptions, j);
+                currentOpt[j] = CalculateMinimumDistance(first[i - 1], second[j - 1],
+                                                         previousOpt, currentOpt, j);
         }
     }
 
     private static double CalculateMinimumDistance(string token1, string token2,
-                                                   double[] previousOptions, double[] currentOptions, int j)
+                                            double[] previousOpt, double[] currentOpt, int j)
     {
-        return Math.Min(1 + previousOptions[j],
+        return Math.Min(1 + previousOpt[j],
                         TokenDistanceCalculator.GetTokenDistance(token1, token2) +
-                        Math.Min(previousOptions[j - 1], currentOptions[j - 1]));
+                        Math.Min(previousOpt[j - 1], currentOpt[j - 1]));
     }
 }
