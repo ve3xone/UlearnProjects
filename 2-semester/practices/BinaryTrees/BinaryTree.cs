@@ -2,124 +2,109 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace BinaryTrees
+namespace BinaryTrees;
+
+public class BinaryTree<T> : IEnumerable<T> where T : IComparable
 {
-    public class BinaryTree<T> : IEnumerable<T> where T : IComparable
+    private T TreeValue;
+    private int Size = 1;
+    private BinaryTree<T> LeftNode;
+    private BinaryTree<T> RightNode;
+    private bool IsInitialized = false;
+
+    public BinaryTree() { }
+
+    private BinaryTree(T value)
     {
-        private T TreeValue;
-        private int Weight = 1;
-        private BinaryTree<T> LeftNode;
-        private BinaryTree<T> RightNode;
-        private bool Flag = false;
+        TreeValue = value;
+        IsInitialized = true;
+    }
 
-        public BinaryTree() { }
+    public T this[int i] => GetElementByIndex(i);
 
-        private BinaryTree(T value)
+    public void Add(T key)
+    {
+        if (!IsInitialized)
         {
-            TreeValue = value;
-            Flag = true;
+            TreeValue = key;
+            IsInitialized = true;
+        }
+        else
+            AddElement(this, key);
+    }
+
+    public bool Contains(T key)
+    {
+        if (!IsInitialized)
+            return false;
+
+        var currentNode = this;
+        while (true)
+        {
+            int result = currentNode.TreeValue.CompareTo(key);
+            if (result == 0) return true;
+            currentNode = result < 0 ? currentNode.RightNode : currentNode.LeftNode;
+            if (currentNode == null) return false;
+        }
+    }
+
+    public IEnumerator<T> GetEnumerator() => EnumerateNodes(this);
+
+    private IEnumerator<T> EnumerateNodes(BinaryTree<T> root)
+    {
+        if (root == null || !root.IsInitialized)
+            yield break;
+
+        if (root.LeftNode != null)
+        {
+            foreach (var item in root.LeftNode)
+                yield return item;
         }
 
-        public T this[int i]
+        yield return root.TreeValue;
+
+        if (root.RightNode != null)
         {
-            get
+            foreach (var item in root.RightNode)
+                yield return item;
+        }
+    }
+
+    private T GetElementByIndex(int i)
+    {
+        var current = this;
+        while (true)
+        {
+            int leftSize = current.LeftNode != null ? current.LeftNode.Size : 0;
+            if (i == leftSize)
+                return current.TreeValue;
+            if (i < leftSize)
+                current = current.LeftNode;
+            else
             {
-                BinaryTree<T> root = this;
-                int parentNodeWeight = 0;
-                while (true)
-                {
-                    int index = parentNodeWeight;
-                    if (root.LeftNode != null)
-                        index += root.LeftNode.Weight;
-                    if (i == index)
-                        return root.TreeValue;
-                    if (i < index)
-                        root = root.LeftNode;
-                    else
-                    {
-                        root = root.RightNode;
-                        parentNodeWeight = index + 1;
-                    }
-                }
+                current = current.RightNode;
+                i -= leftSize + 1;
             }
         }
+    }
 
-        public void Add(T key)
+    private void AddElement(BinaryTree<T> node, T key)
+    {
+        while (true)
         {
-            if (!Flag)
+            node.Size++;
+            if (node.TreeValue.CompareTo(key) > 0)
             {
-                TreeValue = key;
-                Flag = true;
+                if (node.LeftNode != null) node = node.LeftNode;
+                else { node.LeftNode = new BinaryTree<T>(key); break; }
             }
             else
-                InitializeTrees(this, key);
-        }
-
-        private void InitializeTrees(BinaryTree<T> node, T key)
-        {
-            while (true)
             {
-                node.Weight++;
-                if (node.TreeValue.CompareTo(key) > 0)
-                {
-                    if (node.LeftNode != null) node = node.LeftNode;
-                    else { node.LeftNode = new BinaryTree<T>(key); break; }
-                }
-                else
-                {
-                    if (node.RightNode != null) node = node.RightNode;
-                    else { node.RightNode = new BinaryTree<T>(key); break; }
-                }
+                if (node.RightNode != null) node = node.RightNode;
+                else { node.RightNode = new BinaryTree<T>(key); break; }
             }
         }
-
-        public bool Contains(T key)
-        {
-            if (!Flag)
-                return false;
-
-            var parentTree = this;
-            while (true)
-            {
-                int result = parentTree.TreeValue.CompareTo(key);
-                if (result == 0) return true;
-                if (result < 0)
-                {
-                    if (parentTree.RightNode != null) parentTree = parentTree.RightNode;
-                    else return false;
-                }
-                else
-                {
-                    if (parentTree.LeftNode != null) parentTree = parentTree.LeftNode;
-                    else return false;
-                }
-            }
-        }
-
-        public IEnumerator<T> GetEnumerator() => EnumerateNodes(this);
-
-        private IEnumerator<T> EnumerateNodes(BinaryTree<T> root)
-        {
-            if (root == null || !root.Flag)
-                yield break;
-
-            if (root.LeftNode != null)
-            {
-                var leftEnumerator = EnumerateNodes(root.LeftNode);
-                while (leftEnumerator.MoveNext())
-                    yield return leftEnumerator.Current;
-            }
-
-            yield return root.TreeValue;
-
-            if (root.RightNode != null)
-            {
-                var rightEnumerator = EnumerateNodes(root.RightNode);
-                while (rightEnumerator.MoveNext())
-                    yield return rightEnumerator.Current;
-            }
-        }
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
