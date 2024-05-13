@@ -6,11 +6,12 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1"/>
-    <PackageReference Include="NUnit" Version="3.13.3"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="*.Initial.*"/>
-    <Compile Remove="*.Initial.*"/>
+    <Content Include="*.Initial.*" />
+    <Compile Remove="*.Initial.*" />
   </ItemGroup>
 </Project>
