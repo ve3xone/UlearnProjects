@@ -2,15 +2,17 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace rocket_bot;
+
 public class Channel<T> where T : class
 {
     private readonly List<T> _items = new();
-    
+    private readonly object _lockObject = new();
+
     public T this[int index]
     {
         get
         {
-            lock (_items)
+            lock (_lockObject)
             {
                 if (index >= 0 && index < _items.Count)
                     return _items[index];
@@ -19,7 +21,7 @@ public class Channel<T> where T : class
         }
         set
         {
-            lock (_items)
+            lock (_lockObject)
             {
                 if (index >= _items.Count)
                 {
@@ -31,31 +33,31 @@ public class Channel<T> where T : class
             }
         }
     }
-    
+
     public T? LastItem()
     {
-        lock (_items)
+        lock (_lockObject)
         {
             if (_items.Count > 0)
                 return _items.Last();
             return null;
         }
     }
-    
+
     public void AppendIfLastItemIsUnchanged(T item, T knownLastItem)
     {
-        lock (_items)
+        lock (_lockObject)
         {
             if (LastItem() == knownLastItem)
                 _items.Add(item);
         }
     }
-    
+
     public int Count
     {
         get
         {
-            lock (_items)
+            lock (_lockObject)
             {
                 return _items.Count;
             }
