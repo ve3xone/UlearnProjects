@@ -6,6 +6,9 @@ namespace rocket_bot;
 
 public partial class Bot
 {
+    private static readonly Random globalRandom = new();
+    private static readonly object randomLock = new();
+
     public Rocket GetNextMove(Rocket rocket)
     {
         var tasks = CreateTasks(rocket);
@@ -28,7 +31,12 @@ public partial class Bot
 
         Parallel.For(0, threadsCount, i =>
         {
-            var randomInstance = new Random(random.Next());
+            Random randomInstance;
+            lock (randomLock)
+            {
+                randomInstance = new Random(globalRandom.Next());
+            }
+
             tasks.Add(Task.Run(() =>
             {
                 return SearchBestMove(rocket, randomInstance, iterationsCountPerThread);
