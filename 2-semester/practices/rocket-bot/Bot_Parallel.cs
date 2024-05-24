@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace rocket_bot;
@@ -12,11 +13,12 @@ public partial class Bot
     public Rocket GetNextMove(Rocket rocket)
     {
         var tasks = CreateTasks(rocket);
-        var completedTask = Task.WhenAny(tasks).Result;
+        var completedTasks = Task.WhenAll(tasks).Result;
 
-        if (completedTask != null)
+        if (completedTasks != null && completedTasks.Any())
         {
-            return rocket.Move(completedTask.Result.Turn, level);
+            var bestResult = completedTasks.OrderByDescending(taskResult => taskResult.Score).First();
+            return rocket.Move(bestResult.Turn, level);
         }
         else
         {
