@@ -7,9 +7,6 @@ namespace rocket_bot;
 
 public partial class Bot
 {
-    private static readonly Random globalRandom = new();
-    private static readonly object randomLock = new();
-
     public Rocket GetNextMove(Rocket rocket)
     {
         var tasks = CreateTasks(rocket);
@@ -17,12 +14,12 @@ public partial class Bot
 
         if (completedTasks != null && completedTasks.Any())
         {
-            var bestResult = completedTasks.OrderByDescending(taskResult => taskResult.Score).First();
+            var bestResult = completedTasks.MaxBy(taskResult => taskResult.Score);
             return rocket.Move(bestResult.Turn, level);
         }
         else
         {
-            throw new InvalidOperationException("No completed tasks found.");
+            throw new InvalidOperationException("No completed tasks were found.");
         }
     }
 
@@ -33,11 +30,7 @@ public partial class Bot
 
         Parallel.For(0, threadsCount, i =>
         {
-            Random randomInstance;
-            lock (randomLock)
-            {
-                randomInstance = new Random(globalRandom.Next());
-            }
+            var randomInstance = new Random();
 
             tasks.Add(Task.Run(() =>
             {
