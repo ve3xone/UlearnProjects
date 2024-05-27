@@ -53,19 +53,20 @@
 - [Практика «Игра»](https://github.com/ve3xone/BloodyPath) (начал делать, разбираюсь, делаю на monogame, 2d fighter)
 
 [Графы и обходы](https://ulearn.me/course/basicprogramming2/Opredelenie_grafa_1525edc4-1193-48ea-8f9a-061647cd469e):
-- Практика «Поиск в ширину» (пока что не делал)
+- [Практика «Поиск в ширину»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Dungeon/BfsTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-poisk-v-shirinu)
-- Практика «Вынести клад!» (пока что не делал)
+    - [Старая версия задачи](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Dungeon_old/BfsTask.cs)
+- [Практика «Вынести клад!»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Dungeon/DungeonTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-vynesti-klad)
-- Практика «Поделить территорию!» (пока что не делал)
+- [Практика «Поделить территорию!»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Rivals/RivalsTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-podelit-territoriu)
 
 [Жадные алгоритмы](https://ulearn.me/course/basicprogramming2/Kombinatornye_zadachi_8661d8aa-fdc5-4185-8ba3-5651b18acd48):
-- Практика «Путь в лабиринте» (пока что не делал)
+- [Практика «Путь в лабиринте»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Greedy/DijkstraPathFinder.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-put-v-labirinte)
-- Практика «Жадина в лабиринте» (пока что не делал)
+- [Практика «Жадина в лабиринте»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Greedy/GreedyPathFinder.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-zhadina-v-labirinte)
-- Практика «Оптимальный маршрут» (пока что не делал)
+- [Практика «Оптимальный маршрут»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Greedy/NotGreedyPathFinder.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-optimalnyi-marshrut)
 
 [Многопоточное программирование](https://ulearn.me/course/basicprogramming2/Tredy_domeny_i_protsessy_4dd557b3-7903-4ff4-932a-a95b4a7fb15f):
