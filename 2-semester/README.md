@@ -70,8 +70,8 @@
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-optimalnyi-marshrut)
 
 [Многопоточное программирование](https://ulearn.me/course/basicprogramming2/Tredy_domeny_i_protsessy_4dd557b3-7903-4ff4-932a-a95b4a7fb15f):
-- Практика «Поток для AI» (пока что не делал)
-- Практика «Параллельный AI» (пока что не делал)
+- [Практика «Поток для AI»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket-bot/Channel.cs)
+- [Практика «Параллельный AI»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket-bot/Bot_Parallel.cs)
 
 [Динамическое программирование](https://ulearn.me/course/basicprogramming2/6fb7616f-509b-4747-93d1-d9d80914c76b):
 - Практика «Антиплагиат» (пока что не делал)
