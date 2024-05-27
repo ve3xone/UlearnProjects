@@ -82,11 +82,11 @@
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-schastlivye-bilety)
 
 [Структуры данных](https://ulearn.me/course/basicprogramming2/Ochered_s_prioritetami_0dd9a1e8-c370-493d-b384-94c62f04bf34):
-- Практика «Add и Contains» (пока что не делал)
+- [Практика «Add и Contains»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/BinaryTrees/BinaryTree.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-add-i-contains)
-- Практика «Enumerable и Индексатор» (пока что не делал)
+- [Практика «Enumerable и Индексатор»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/BinaryTrees/BinaryTree.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-enumerable-i-indeksator)
-- Практика «Disk Tree» (пока что не делал)
+- [Практика «Disk Tree»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/DiskTree/DiskTreeTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-disk-tree)
 
 [Рефлексия типов](https://ulearn.me/course/basicprogramming2/Refleksiya_Klass_Type_8386b127-ea69-465d-87ba-24e08df9f6d2):
