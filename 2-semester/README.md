@@ -74,11 +74,11 @@
 - [Практика «Параллельный AI»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/rocket-bot/Bot_Parallel.cs)
 
 [Динамическое программирование](https://ulearn.me/course/basicprogramming2/6fb7616f-509b-4747-93d1-d9d80914c76b):
-- Практика «Антиплагиат» (пока что не делал)
+- [Практика «Антиплагиат»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Antiplagiarism/LevenshteinCalculator.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-antiplagiat)
-- Практика «Diff Tool» (пока что не делал)
+- [Практика «Diff Tool»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Antiplagiarism/LongestCommonSubsequenceCalculator.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-diff-tool)
-- Практика «Счастливые билеты» (пока что не делал)
+- [Практика «Счастливые билеты»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Tickets/TicketsTask.cs)
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-schastlivye-bilety)
 
 [Структуры данных](https://ulearn.me/course/basicprogramming2/Ochered_s_prioritetami_0dd9a1e8-c370-493d-b384-94c62f04bf34):
