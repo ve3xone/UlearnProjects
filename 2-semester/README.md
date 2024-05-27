@@ -90,4 +90,4 @@
     - [Разбор задачи](https://vk.com/@fuckingulearn-praktika-disk-tree)
 
 [Рефлексия типов](https://ulearn.me/course/basicprogramming2/Refleksiya_Klass_Type_8386b127-ea69-465d-87ba-24e08df9f6d2):
-- Практика «Документация» (пока что не делал)
+- [Практика «Документация»](https://github.com/ve3xone/UlearnProjects/blob/main/2-semester/practices/Documentation/Specifier.cs)
