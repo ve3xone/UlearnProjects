@@ -7,27 +7,26 @@ namespace BinaryTrees;
 public class BinaryTree<T> : IEnumerable<T> where T : IComparable
 {
     private T TreeValue;
-    private int Size = 1;
+    private int Size;
     private BinaryTree<T> LeftNode;
     private BinaryTree<T> RightNode;
-    private bool IsInitialized = false;
 
-    public BinaryTree() { }
+    public BinaryTree() { Size = 0; }
 
     private BinaryTree(T value)
     {
         TreeValue = value;
-        IsInitialized = true;
+        Size = 1;
     }
 
     public T this[int i] => GetElementByIndex(i);
 
     public void Add(T key)
     {
-        if (!IsInitialized)
+        if (Size == 0)
         {
             TreeValue = key;
-            IsInitialized = true;
+            Size = 1;
         }
         else
             AddElement(this, key);
@@ -35,24 +34,25 @@ public class BinaryTree<T> : IEnumerable<T> where T : IComparable
 
     public bool Contains(T key)
     {
-        if (!IsInitialized)
+        if (Size == 0)
             return false;
 
         var currentNode = this;
-        while (true)
+        while (currentNode != null)
         {
             int result = currentNode.TreeValue.CompareTo(key);
-            if (result == 0) return true;
+            if (result == 0)
+                return true;
             currentNode = result < 0 ? currentNode.RightNode : currentNode.LeftNode;
-            if (currentNode == null) return false;
         }
+        return false;
     }
 
     public IEnumerator<T> GetEnumerator() => EnumerateNodes(this);
 
     private IEnumerator<T> EnumerateNodes(BinaryTree<T> root)
     {
-        if (root == null || !root.IsInitialized)
+        if (root == null || root.Size == 0)
             yield break;
 
         if (root.LeftNode != null)
@@ -73,7 +73,7 @@ public class BinaryTree<T> : IEnumerable<T> where T : IComparable
     private T GetElementByIndex(int i)
     {
         var current = this;
-        while (true)
+        while (current != null)
         {
             int leftSize = current.LeftNode != null ? current.LeftNode.Size : 0;
             if (i == leftSize)
@@ -86,22 +86,31 @@ public class BinaryTree<T> : IEnumerable<T> where T : IComparable
                 i -= leftSize + 1;
             }
         }
+        throw new IndexOutOfRangeException();
     }
 
     private void AddElement(BinaryTree<T> node, T key)
     {
-        while (true)
+        while (node != null)
         {
             node.Size++;
             if (node.TreeValue.CompareTo(key) > 0)
             {
                 if (node.LeftNode != null) node = node.LeftNode;
-                else { node.LeftNode = new BinaryTree<T>(key); break; }
+                else
+                {
+                    node.LeftNode = new BinaryTree<T>(key) { Size = 1 };
+                    return;
+                }
             }
             else
             {
                 if (node.RightNode != null) node = node.RightNode;
-                else { node.RightNode = new BinaryTree<T>(key); break; }
+                else
+                {
+                    node.RightNode = new BinaryTree<T>(key) { Size = 1 };
+                    return;
+                }
             }
         }
     }
